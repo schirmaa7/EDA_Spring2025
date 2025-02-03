@@ -101,7 +101,6 @@ sort(summary(neonics$Species.Common.Name)) #sort the number of observations in t
 
 ```{r finding class of conc.1.author for neonics}
 class(neonics$Conc.1..Author.) #find class of column
-print(neonics)
 ```
 
 
