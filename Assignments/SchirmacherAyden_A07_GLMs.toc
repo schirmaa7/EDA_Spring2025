@@ -1,0 +1,6 @@
+\contentsline {subsection}{OVERVIEW}{1}{section*.3}%
+\contentsline {subsection}{Directions}{1}{section*.4}%
+\contentsline {subsection}{Set up your session}{1}{section*.5}%
+\contentsline {subsection}{Simple regression}{2}{section*.6}%
+\contentsline {subsection}{Multiple regression}{4}{section*.7}%
+\contentsline {subsection}{Analysis of Variance}{6}{section*.8}%

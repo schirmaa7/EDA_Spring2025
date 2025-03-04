@@ -84,7 +84,7 @@ function1<-function(x) {
   if (x/1.5>50) {
   "PASS"}
   else {"FAIL"}
-}. 
+}.  
 
 #11. Create a function using ifelse()
 function2<-function(x){
