@@ -96,7 +96,7 @@ ggplot(processed_data, aes(x = depth, y = temperature_C))+ #setting x and y
   geom_smooth(method = "lm",linewidth = 0.65, col = "red3")+
   #^^ trend line
   geom_text(x=12.5,y=20, #where the label goes on graph
-    label= "temperature = -1.61620*depth + 18.59256 ", size=3)+
+    label= "temperature = -1.94621*depth + 21.95597 ", size=3)+
   #^^labeling the expression/equation on graph
   ylim(0,35)+ #setting y limits
   labs(x = "depth (m)",y = "temperature (C)")
