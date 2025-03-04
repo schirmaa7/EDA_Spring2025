@@ -175,7 +175,7 @@ summary(lakename_lm)
 ```{r scatterplot.2, warning=FALSE, message=FALSE, fig.cap='Temperature by Depth Across All Lakes'}
 #14.
 ggplot(processed_data, aes(x = depth, y = temperature_C, col = lakename))+
-  geom_point(alpha = 0.35)+
+  geom_point(alpha = 0.5)+
   ylim(0,35)+
   geom_smooth(method = "lm", se = FALSE, linewidth=0.85)+
   labs(x="depth (m)", y="temperature (C)")
