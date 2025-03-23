@@ -70,8 +70,6 @@ file_paths <- c("Data/Raw/Ozone_TimeSeries/EPAair_O3_GaringerNC2019_raw.csv",
 GaringerOzone <- file_paths %>% # Read and combine all CSV files
   map(~ read_csv(here(.))) %>%
   bind_rows()
-
-
 ```
 
 ## Wrangle
