@@ -36,7 +36,9 @@ editor_options:
 -   First, let's set up our coding session
 
 ```{r setup, warning=F, error=F}
+remove(list=ls())
 #Import packages
+#install.packages("mapview")
 library(tidyverse);library(here);
 library(sf);library(mapview);library(leaflet)
 
@@ -101,13 +103,22 @@ This a link to a spatial dataset in GeoJSON format.Let's read this dataset in an
 
 Well do this one together...
 ```{r read in powerplant data}
+nc_data <- paste0(
+  'https://services1.arcgis.com/Hp6G80Pky0om7QvQ/arcgis/rest/services/',
+  'Plants_gdb/FeatureServer/0/',
+  'query?outFields=*&where=1%3D1&f=geojson')
+  
+nc_plants <- st_read(nc_data)%>%
+  filter(STATE=="NC")
 
+mapview(nebraska_plants)
+structure(nc_plants)
 ```
 
 #Now we can make a pretty map!
 ```{r cluster map}
 #Create the map
-cluster_map <- leaflet(powerplants) %>% 
+cluster_map <- leaflet(nc_plants) %>% 
   addTiles() %>% 
   addMarkers(
     #clusterOptions = markerClusterOptions(),
