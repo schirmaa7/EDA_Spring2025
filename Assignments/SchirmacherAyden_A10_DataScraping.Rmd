@@ -182,7 +182,11 @@ scrape_it <- function(the_year, PWSID) {
 ```{r fetch.and.plot.Durham.2020.data}
 #7 
 fetch_2020<-scrape_it(2020, '03-32-010')
-view(fetch_2020)
+
+ggplot(data=fetch_2020) +
+  geom_line(aes(x=Date, y=Max.Daily.Use)) + 
+  theme_minimal() +
+  labs(title="Maximum Daily Use in Durham, 2020", x="Month", y="Max Daily Use (MGD)")
 ```
 
 
@@ -198,7 +202,7 @@ ggplot(data=fetch_2020) +
   geom_line(aes(x=Date, y=Max.Daily.Use.x, color="Durham")) + 
   geom_line(aes(x=Date, y=Max.Daily.Use.y, color="Asheville")) +
   theme_minimal() +
-  labs(title="Maximum Daily Use Comparison", x="Month", y="Max Daily Use (MGD)") +
+  labs(title="Maximum Daily Use Comparison Between Asheville and Durham, 2020", x="Month", y="Max Daily Use (MGD)") +
   scale_color_manual(name="Dataset", values=c("Durham"="coral", "Asheville"="turquoise3"))
 
 ```
